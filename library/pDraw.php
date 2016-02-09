@@ -3144,10 +3144,10 @@
       { if ( function_exists($Format) ) { return(call_user_func($Format,$Value)); } }
 
      if ( $Mode == AXIS_FORMAT_DATE )
-      { if ( $Format == NULL ) { $Pattern = "d/m/Y"; } else { $Pattern = $Format; } return(gmdate($Pattern,$Value)); }
+      { if ( $Format == NULL ) { $Pattern = "d/m/Y"; } else { $Pattern = $Format; } return(date($Pattern,$Value)); }
 
      if ( $Mode == AXIS_FORMAT_TIME )
-      { if ( $Format == NULL ) { $Pattern = "H:i:s"; } else { $Pattern = $Format; } return(gmdate($Pattern,$Value)); }
+      { if ( $Format == NULL ) { $Pattern = "H:i:s"; } else { $Pattern = $Format; } return(date($Pattern,$Value)); }
 
      if ( $Mode == AXIS_FORMAT_CURRENCY )
       { return($Format.number_format($Value,2)); }
